@@ -13,16 +13,16 @@ namespace HelloiPhone
 	partial class HelloiPhoneViewController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UITextField txtInput { get; set; }
+		MonoTouch.UIKit.UITextView txtOutput { get; set; }
 
 		[Action ("btnOK:")]
 		partial void btnOK (MonoTouch.Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (txtInput != null) {
-				txtInput.Dispose ();
-				txtInput = null;
+			if (txtOutput != null) {
+				txtOutput.Dispose ();
+				txtOutput = null;
 			}
 		}
 	}

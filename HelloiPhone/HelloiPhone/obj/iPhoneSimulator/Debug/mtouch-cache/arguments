@@ -1,14 +1,14 @@
 # Version: 7.2.0.2 (58c3efa)
-# [first argument, ignore] # /Users/bpyne/Dev/Sandbox/HelloiPhone/HelloiPhone/bin/iPhoneSimulator/Debug/mtouch.exe
+# [first argument, ignore] # /Users/bpyne/Dev/XSandbox/HelloiPhone/HelloiPhone/bin/iPhoneSimulator/Debug/mtouch.exe
 /Developer/MonoTouch/usr/bin/mtouch \
 	-sdkroot \
 	/Applications/Xcode.app/Contents/Developer \
 	--cache \
-	/Users/bpyne/Dev/Sandbox/HelloiPhone/HelloiPhone/obj/iPhoneSimulator/Debug/mtouch-cache \
+	/Users/bpyne/Dev/XSandbox/HelloiPhone/HelloiPhone/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--nomanifest \
 	--nosign \
 	-sim \
-	/Users/bpyne/Dev/Sandbox/HelloiPhone/HelloiPhone/bin/iPhoneSimulator/Debug/HelloiPhone.app \
+	/Users/bpyne/Dev/XSandbox/HelloiPhone/HelloiPhone/bin/iPhoneSimulator/Debug/HelloiPhone.app \
 	-r \
 	/Developer/MonoTouch/usr/lib/mono/2.1/System.dll \
 	-r \
@@ -24,4 +24,4 @@
 	-targetver \
 	7.0 \
 	--abi=i386 \
-	/Users/bpyne/Dev/Sandbox/HelloiPhone/HelloiPhone/bin/iPhoneSimulator/Debug/HelloiPhone.exe \
+	/Users/bpyne/Dev/XSandbox/HelloiPhone/HelloiPhone/bin/iPhoneSimulator/Debug/HelloiPhone.exe \

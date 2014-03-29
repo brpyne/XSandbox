@@ -105,6 +105,8 @@
     <Compile Include="HelloiPhoneViewController.designer.cs">
       <DependentUpon>HelloiPhoneViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocationManager.cs" />
+    <Compile Include="LocationUpdatedEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="HelloiPhoneViewController.xib" />
