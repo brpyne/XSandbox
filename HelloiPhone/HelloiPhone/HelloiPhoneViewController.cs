@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Threading.Tasks;
 using MonoTouch.Foundation;
+using MonoTouch.AddressBook;
 using MonoTouch.UIKit;
 using MonoTouch.CoreLocation;
 
@@ -75,7 +76,10 @@ namespace HelloiPhone
 
 		public string GetCurrentCity (CLPlacemark placemark)
 		{
-			return placemark.AddressDictionary.ToString ();
+			NSObject city;
+			placemark.AddressDictionary.TryGetValue (ABPersonAddressKey.City, out city);
+
+			return city.ToString();
 		}
 
 		public async Task<CLPlacemark[]> ReverseGeocodeAsync (CLLocation location)
