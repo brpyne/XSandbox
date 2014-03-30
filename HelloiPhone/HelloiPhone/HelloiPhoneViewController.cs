@@ -19,45 +19,45 @@ namespace HelloiPhone
 			base.DidReceiveMemoryWarning ();
 
 			// Release any cached data, images, etc that aren't in use.
+
+		}
+
+		public async void ReverseGeocodeToConsoleAsync (CLLocation location) {
+			var geoCoder = new CLGeocoder();
+			var placemarks = await geoCoder.ReverseGeocodeLocationAsync(location);
+			foreach (var placemark in placemarks) {
+				Console.WriteLine(placemark);
+			}          
 		}
 
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 
-			this.locMgr = new CLLocationManager();
 			this.txtOutput.Text = string.Empty;
 
-			StartLocationUpdates ();
+
+			// screen subscribes to the location changed event
+			UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
+				AppDelegate.Manager.LocationUpdated += HandleLocationChanged;
+			});
+
+			// whenever the app enters the background state, we unsubscribe from the event 
+			// so we no longer perform foreground updates
+			UIApplication.Notifications.ObserveDidEnterBackground ((sender, args) => {
+				AppDelegate.Manager.LocationUpdated -= HandleLocationChanged;
+			});
 		}
-
-		protected CLLocationManager locMgr;
-
-		public CLLocationManager LocMgr{
-			get { return this.locMgr; }
-		}
-
-
-		public void StartLocationUpdates()
-		{
-			if (CLLocationManager.LocationServicesEnabled) {
-				LocMgr.DesiredAccuracy = 1;
-				LocMgr.LocationsUpdated += (object sender, CLLocationsUpdatedEventArgs e) =>
-				{
-					HandleLocationChanged (this, new LocationUpdatedEventArgs (e.Locations [e.Locations.Length - 1]));
-				};
-
-				LocMgr.StartUpdatingLocation();
-			}
-		}
-
-
 
 		public void HandleLocationChanged (object sender, LocationUpdatedEventArgs e)
 		{
+			// handle foreground updates
 			CLLocation location = e.Location;
-			Log (string.Format("Location Updated: {0}, {1}", location.Coordinate.Longitude, location.Coordinate.Latitude));
+			Log(string.Format("{0}, {1}", location.Coordinate.Longitude.ToString (), location.Coordinate.Latitude.ToString ()));
+
+			Console.WriteLine ("foreground updated");
 		}
+
 
 		private void Log(string message)
 		{

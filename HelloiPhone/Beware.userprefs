@@ -4,10 +4,11 @@
     <Files>
       <File FileName="HelloiPhone/AppDelegate.cs" Line="1" Column="1" />
       <File FileName="HelloiPhone/HelloiPhoneViewController.designer.cs" Line="1" Column="1" />
-      <File FileName="HelloiPhone/HelloiPhoneViewController.cs" Line="56" Column="63" />
+      <File FileName="HelloiPhone/HelloiPhoneViewController.cs" Line="39" Column="4" />
       <File FileName="HelloiPhone/Info.plist" />
       <File FileName="HelloiPhone/Main.cs" Line="1" Column="1" />
-      <File FileName="HelloiPhone/LocationManager.cs" Line="1" Column="1" />
+      <File FileName="HelloiPhone/LocationManager.cs" Line="50" Column="85" />
+      <File FileName="HelloiPhone/LocationUpdatedEventArgs.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

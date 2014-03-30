@@ -4,7 +4,6 @@ using MonoTouch.CoreLocation;
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
 
-/*
 namespace HelloiPhone
 {
 	public class LocationManager
@@ -84,4 +83,3 @@ namespace HelloiPhone
 		}
 	}
 }
-*/

@@ -15,11 +15,7 @@ namespace HelloiPhone
 		// class-level declarations
 		UIWindow window;
 		HelloiPhoneViewController viewController;
-		//public static LocationManager Manager = null;
-
-
-
-
+		public static LocationManager Manager = null;
 
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this
@@ -37,8 +33,8 @@ namespace HelloiPhone
 			window.MakeKeyAndVisible ();
 
 			// as soon as the app is done launching, begin generating location updates in the location manager
-			//Manager = new LocationManager();
-			//Manager.StartLocationUpdates();
+			Manager = new LocationManager();
+			Manager.StartLocationUpdates();
 			
 			return true;
 		}
